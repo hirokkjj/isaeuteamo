@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Amor</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Cookie', cursive; /* Fonte personalizada */
+            overflow: hidden;
+            position: relative;
+            background: #440e0e; /* Cor de fundo de fallback */
+        }
+
+        /* Camada de cor sobre a imagem de fundo */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(51, 2, 2, 0.778); /* Cor e opacidade (aqui: vermelho com 30% de opacidade) */
+            z-index: -1;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('fundo-nosso-amor.jpg'); /* Caminho da imagem de fundo */
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+        }
+
+        .hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .hearts span {
+            position: absolute;
+            display: block;
+            width: 50px; /* Tamanho da imagem caindo */
+            height: 50px;
+            background-size: contain; /* Ajusta a imagem sem distorcer */
+            background-repeat: no-repeat;
+            background-position: center;
+            animation: animate 10s linear infinite;
+            bottom: -150px;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: #fb0000;
+            padding-top: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+        }
+
+        .counter {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no contador */
+        }
+
+        .images {
+            margin-top: 20px;
+        }
+
+        .images img {
+            width: 150px; /* Tamanho maior das fotos */
+            height: 200px;
+            border-radius: 50%;
+            margin: 10px;
+            border: 5px solid #fb1a1a;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.7); /* Sombra nas laterais */
+        }
+
+        .quotes {
+            margin-top: 20px;
+            font-size: 1.5em;
+            font-style: italic;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra nas frases */
+        }
+
+        /* Efeito de brilho no site */
+        .glow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
+            pointer-events: none;
+            animation: glow-animate 3s infinite alternate;
+        }
+
+        @keyframes glow-animate {
+            0% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Estilo para o player de áudio no canto superior direito */
+        .audio-player {
+            position: fixed;
+            top: 20px; /* Alterado para o canto superior */
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .audio-player audio {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="overlay"></div> <!-- Camada de cor sobre a imagem de fundo -->
+
+    <div class="hearts">
+        <!-- As imagens caindo serão adicionadas dinamicamente pelo JavaScript -->
+    </div>
+
+    <div class="glow"></div> <!-- Efeito de brilho -->
+
+    <div class="container">
+        <div class="counter">
+            <span id="days">00</span> Dias <span id="hours">00</span> Horas <span id="minutes">00</span> Minutos <span id="seconds">00</span> Segundos
+        </div>
+
+        <div class="images">
+            <img src="sua-foto1.jpg" alt="Foto 1">
+            <img src="sua-foto2.jpg" alt="Foto 2">
+        </div>
+
+        <div class="quotes">
+            <p>"Eu te amo mais que tudo nesse mundo!"</p>
+            <p>"Desde o momento em que nossos caminhos se cruzaram, minha vida ganhou um brilho novo, uma cor mais intensa, um significado que eu nem sabia que precisava. Você é a prova de que o amor verdadeiro existe, e eu sou a pessoa mais sortuda por poder vivê-lo ao seu lado.
+
+                Quantos desafios já enfrentamos juntos, e aqui estamos, mais fortes, mais unidos, mais apaixonados do que nunca. Nunca desistimos um do outro, nunca soltamos as mãos, porque sabemos que o que temos é raro, é intenso, é eterno. E eu prometo, meu amor, que será sempre assim.
+                
+                Você torna meus dias mais leves, minha vida mais bonita e meu coração mais completo. Seu sorriso é minha paz, seu abraço é meu lar, e seu amor é tudo o que eu preciso para ser feliz. Eu te admiro em cada detalhe, em cada gesto, em cada sonho que construímos juntos.
+                
+                E o futuro? Ah, meu amor, ele já está traçado. Vai ter altar, vai ter votos emocionados, vai ter você de branco, como você sempre sonhou. E pode ter certeza que, quando você disser "eu vou ser a de branco", eu vou responder com aquela frase "achei convincente..". Porque nosso amor é como nos filmes, mas ainda melhor: é real, é nosso, e vai durar para sempre.
+                
+                Eu te amo, hoje e para sempre. 💖
+                
+                "</p>
+        </div>
+    </div>
+    <!-- Caixa de áudio no canto superior direito -->
+    <div class="audio-player">
+        <audio controls>
+            <source src="audio-gravado.mp3" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+    </div>
+
+    <script>
+        const startDate = new Date("2024-06-12"); // Coloque a data que começaram a namorar
+
+        function updateCounter() {
+            const now = new Date();
+            const diff = now - startDate;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = days;
+            document.getElementById('hours').innerText = hours;
+            document.getElementById('minutes').innerText = minutes;
+            document.getElementById('seconds').innerText = seconds;
+        }
+
+        setInterval(updateCounter, 1000);
+        updateCounter();
+
+        // Função para criar imagens caindo aleatoriamente
+        const images = ['caindo1.png', 'caindo2.png', 'caindo3.png']; // Adicione os caminhos das imagens
+        const heartsContainer = document.querySelector('.hearts');
+
+        function createFallingImage() {
+            const span = document.createElement('span');
+            const randomImage = images[Math.floor(Math.random() * images.length)];
+            span.style.backgroundImage = `url('${randomImage}')`;
+            span.style.left = `${Math.random() * 100}%`; // Posição horizontal aleatória
+            span.style.animationDuration = `${Math.random() * 5 + 5}s`; // Duração aleatória da animação
+            heartsContainer.appendChild(span);
+
+            // Remove a imagem após a animação terminar
+            span.addEventListener('animationend', () => {
+                span.remove();
+            });
+        }
+
+        setInterval(createFallingImage, 3000); // Cria uma nova imagem a cada 3 segundos
+    </script>
+</body>
+</html>
